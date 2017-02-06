@@ -1,0 +1,9 @@
+title = "Dormouse Hole 2017"
+baseurl = "https://dormouse.github.io/"
+languageCode = "en-us"
+googleAnalytics = "UA-60694969-1"
+theme = "hugo_theme_robust"
+[Params]
+    Author = "Dormouse Young"
+    disqusShortname = "dormouseblog"
+
