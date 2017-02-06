@@ -1,11 +1,12 @@
 +++
 date = "2017-01-18T16:36:45+08:00"
-title = "go lang learn 1 (fibonacci)"
-description = "Quick Start for golang"
-tags  = [ "Development", "Golang", "learn"]
-draft = true
-
+title = "golang exercises"
+description = "Exercises for golang"
+tags  = ["golang", "exercises"]
+categories = ["development"]
 +++
+
+# fibonacci
 
 ``` go
 package main

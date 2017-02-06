@@ -2,8 +2,8 @@
 date  = "2017-01-18T11:56:48+08:00"
 title = "Go Quick Start"
 description = "Quick Start for golang"
-tags  = [ "Development", "Golang"]
-draft = true
+tags  = ["golang", "quick_start"]
+categories = ["development"]
 +++
 
 # Quick Start

@@ -2,8 +2,8 @@
 date = "2017-01-18T21:12:42+08:00"
 title = "Hugo Quick Start"
 description = "Hugo is a static site generator. This post will build a blog with Hugo quickly."
-tags = ["Hugo", "QuickStart"]
-categories = ["write"]
+tags = ["hugo", "quick_start"]
+categories = ["software"]
 slug = "hugo-quick-start"
 +++
 
