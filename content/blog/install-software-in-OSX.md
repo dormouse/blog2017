@@ -2,7 +2,7 @@
 date = "2017-02-05T22:34:28+08:00"
 title = "Install Software In OSX"
 description = "We always have to install... . Wait, How to?"
-tags = ["homebrew"]
+tags = ["homebrew", "macos"]
 categories = ["software"]
 slug = "Install-software-in-osx"
 thumbnail = "images/mac.jpg"
