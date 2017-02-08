@@ -1,1 +1,9 @@
-/public
+syntax: glob
+__pycache__
+cache
+pelican-plugins
+pelican-themes
+output
+*.pyc
+*.pid
+*.swp

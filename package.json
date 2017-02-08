@@ -1,8 +1,0 @@
-{
-  "_aerobatic": {
-    "build": {
-      "engine": "hugo",
-      "themeRepo": "https://github.com/dim0627/hugo_theme_robust.git"
-    }
-  }
-}
