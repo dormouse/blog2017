@@ -28,6 +28,7 @@ LINKS = (
 
 SOCIAL = (('GitHub', 'http://github.com/username'),)
 
+
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
@@ -38,13 +39,17 @@ PLUGIN_PATHS = ['pelican-plugins']
 # More setting see:
 # https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 THEME = 'pelican-themes/pelican-bootstrap3'
+CC_LICENSE = 'CC-BY-NC-ND'
+# GITHUB_USER = 'dormouse'
+DOCUTIL_CSS = True # for rst file
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 
-PLUGINS = ['i18n_subsites', 'tag_cloud', 'tipue_search']
+PLUGINS = ['i18n_subsites', 'related_posts', 'tag_cloud', 'tipue_search']
 SHOW_DATE_MODIFIED = True
-DISPLAY_CATEGORY_IN_BREADCRUMBS = True
+DISPLAY_BREADCRUMBS = False
+DISPLAY_CATEGORY_IN_BREADCRUMBS = False
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_TAGS_INLINE = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
-DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')

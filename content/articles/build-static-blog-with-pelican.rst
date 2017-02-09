@@ -121,7 +121,8 @@ Edit pelicanconf.py as following:
 Themes which I like is:
 
 * elegant
-* pelican-bootstrap3
+* `pelican-bootstrap3
+  <https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3>`_
 * pelican-sundow
 * voidy-bootstrap
 
