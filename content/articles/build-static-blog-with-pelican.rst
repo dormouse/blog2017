@@ -12,14 +12,14 @@ Build Static Blog With Pelican
 
 Setup environment and install software::
 
-    mkdir pelican_blog
-    cd pelican_blog
-    mkvirtualenv pelican_blog
-    pip install pelican markdown beautifulsoup4
+    $ mkdir pelican_blog
+    $ cd pelican_blog
+    $ mkvirtualenv pelican_blog
+    $ pip install pelican markdown beautifulsoup4
 
 Pelican quickstart::
 
-    pelican-quickstart
+    $ pelican-quickstart
 
 You will see blow::
 
@@ -57,9 +57,9 @@ Now we have following files in folder::
 
 Get plugins::
 
-    git clone git://github.com/getpelican/pelican-plugins.git
+    $ git clone git://github.com/getpelican/pelican-plugins.git
 
-Get theme::
+Get theme:
 
     $ mkdir pelican-themes
     $ cd pelican-themes/
@@ -67,11 +67,9 @@ Get theme::
 
 Or you can test all themes, notice use "recursive"::
 
-    git clone --recursive git://github.com/getpelican/pelican-themes ./pelican-themes
+    $ git clone --recursive git://github.com/getpelican/pelican-themes ./pelican-themes
 
-Edit pelicanconf.py as following:
-
-.. code-block:: python
+Edit pelicanconf.py as following::
 
     #!/usr/bin/env python
     # -*- coding: utf-8 -*- #
@@ -157,12 +155,12 @@ Edit publishconf.py as following:
 
 Make some floders::
 
-    cd content
-    mkdir articles files images pages
+    $ cd content
+    $ mkdir articles files images pages
 
 Write first blog::
 
-    vim articles/hello.rst
+    $ vim articles/hello.rst
 
 Blog content like this::
 
@@ -189,13 +187,46 @@ preview local html::
 
     make devserver
 
-TODO:
 
-- add TOC(use pelican-toc plugin)
-- update conf
+Add Favicon
+===========
 
-Reference：
+http://iconifier.net is helpful. Upload your pic and get a zip file which
+include all size files within.
+
+
+Auto Github Push
+================
+
+Modify Makefile. Add::
+
+    GITHUB_DIR=~/project/dormouse.github.io/
+
+Chang "github" part as following::
+
+    github: publish
+    rm -rf $(GITHUB_DIR)/*
+    cp -r  $(OUTPUTDIR)/* $(GITHUB_DIR)
+    cd $(GITHUB_DIR) && git add --all && git commit -m 'update' && git push origin $(GITHUB_PAGES_BRANCH)
+
+
+Add License
+===========
+
+I choose Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0) and copy code from http://creativecommons.org/choose/ .
+
+
+Reference
+=========
 
 * `Configuring Pelican Static Blog <http://pbpython.com/pelican-config.html>`_
 * `使用 Pelican + Markdown + GitHub Pages 来撰写 Blog
   <http://www.tuicool.com/articles/INjiui>`_
+
+
+TODO
+====
+
+- add TOC(use pelican-toc plugin)
+- update conf
