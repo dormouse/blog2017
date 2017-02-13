@@ -26,6 +26,7 @@ Set always come from top with full width:
 - Goto ``Preferences -> Profiles ->``
 - set  ``Style`` ``Full-Width Top of Screen``
 
+
 Set system hotkey:
 
 - Goto ``Preferences -> Keys``
@@ -42,6 +43,7 @@ Hotkey
 ============= =======================================================
 Key           Description
 ============= =======================================================
+Ctrl i        Show window (set in ``Basic Config`` section above)
 cmd w         close panel or tab or window
 cmd d         split the current session into two panes horizontally
 cmd shift d   split the current session into two panes Vertically
