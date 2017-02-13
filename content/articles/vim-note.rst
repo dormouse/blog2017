@@ -64,6 +64,44 @@ date
 - ``:r !command``: run command in shell, insert result to next line
   (ie: ``:r !date``: insert date to nex line)
 
+
+What is the <Leader> key?
+=========================
+
+.. IMPORTANT::
+
+    This section copy from:
+    http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file
+
+The ``<Leader>`` key is mapped to ``\`` by default. So if you have a map of
+``<Leader>t``, you can execute it by default with ``\+t``. For more detail
+or re-assigning it using the mapleader variable, see ``:help leader``.
+
+To define a mapping which uses the "mapleader" variable, the special string
+"<Leader>" can be used.  It is replaced with the string value of "mapleader".
+If "mapleader" is not set or empty, a backslash is used instead.  
+
+Example::
+
+    :map <Leader>A  oanother line <Esc>
+
+Works like::
+
+    :map \A  oanother line <Esc>
+
+But after::
+
+    :let mapleader = ","
+
+It works like::
+
+    :map ,A  oanother line <Esc>
+
+Note that the value of "mapleader" is used at the moment the mapping is
+defined.  Changing "mapleader" after that has no effect for already defined
+mappings.
+
+
 Reference
 =========
 

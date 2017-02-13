@@ -64,24 +64,24 @@ See `First Use <https://github.com/bordaigorl/sublime-evernote#first-use>`_
 for linking the plugin to your account.
 
 
-My Setting
-==========
 
-::
+My Settings
+===========
+
+Flowing is my settings::
+
     {
         "auto_complete": false,
         "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
         "ensure_newline_at_eof_on_save": true,
-        "file_exclude_patterns":
-        [
+        "file_exclude_patterns":[
             ".DS_Store",
             "*.pid",
             "*.pyc"
         ],
         "find_selected_text": true,
         "fold_buttons": false,
-        "folder_exclude_patterns":
-        [
+        "folder_exclude_patterns":[
             ".git",
             "__pycache__"
         ],

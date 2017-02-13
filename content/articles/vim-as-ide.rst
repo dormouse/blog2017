@@ -10,35 +10,19 @@ Vim As IDE
 :author: Dormouse Young
 :summary: Vim is great for program code
 
-Config
-======
+Install Vundle
+==============
 
-Vundle
-------
+Vundle is short for Vim bundle and is a Vim plugin manager.
 
-Introduction
-^^^^^^^^^^^^
+Official site: https://github.com/VundleVim/Vundle.vim
 
-Installation requires Git and triggers git clone for each configured
-repository to ~/.vim/bundle/ by default. Curl is required for search.
-
-If you are using Windows, go directly to Windows setup. If you run into
-any issues, please consult the FAQ. See Tips for some advanced configurations.
-
-Using non-POSIX shells, such as the popular Fish shell, requires additional
-setup. Please check the FAQ.
-
-Set up
-^^^^^^
-::
+Use following command to install Vundle::
 
     $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-Configure Plugins
-^^^^^^^^^^^^^^^^^
-
-Put this at the top of your .vimrc to use Vundle. Remove plugins you don't
-need, they are for illustration purposes::
+Put following lines at the top of your .vimrc to use Vundle. Remove plugins you
+don't need, they are for illustration purposes::
 
     set nocompatible              " be iMproved, required
     filetype off                  " required
@@ -84,15 +68,16 @@ need, they are for illustration purposes::
     " see :h vundle for more details or wiki for FAQ
     " Put your non-Plugin stuff after this line
 
-Install Plugins
-^^^^^^^^^^^^^^^
 
-Launch ``vim`` and run ``:PluginInstall``
+Two ways to Install Plugins
+===========================
 
-To install from command line: ``vim +PluginInstall +qall``
+- Launch ``vim`` and run ``:PluginInstall``
+
+- To install from command line: ``vim +PluginInstall +qall``
 
 
-my .vimrc
+My .vimrc
 =========
 
 2014年 10月 20日 星期一 20:24:31 CST
@@ -113,16 +98,22 @@ There is my .vimrc::
 
     " The following are examples of different formats supported.
     " Keep Plugin commands between vundle#begin/end.
+
     " plugin on GitHub repo
     Plugin 'vim-scripts/VimIM'
+    " for file tree list
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdcommenter'
 
-    " Plugin 'tpope/vim-fugitive'
     " plugin from http://vim-scripts.org/vim/scripts.html
     " Plugin 'L9'
+
     " Git plugin not hosted on GitHub
     " Plugin 'git://git.wincent.com/command-t.git'
+
     " git repos on your local machine (i.e. when working on your own plugin)
     " Plugin 'file:///home/gmarik/path/to/plugin'
+
     " The sparkup vim script is in a subdirectory of this repo called vim.
     " Pass the path to set the runtimepath properly.
     " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -131,6 +122,7 @@ There is my .vimrc::
     " Plugin 'ascenator/L9', {'name': 'newL9'}
 
     " All of your Plugins must be added before the following line
+
     call vundle#end()            " required
     filetype plugin indent on    " required
     " To ignore plugin indent changes, instead use:
