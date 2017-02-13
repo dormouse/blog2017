@@ -92,19 +92,6 @@ Launch ``vim`` and run ``:PluginInstall``
 To install from command line: ``vim +PluginInstall +qall``
 
 
-Basic Usage
-===========
-
-* ``:sp`` split horizontally
-* ``:vs`` split vertically
-
-Vim Cheat Sheet: https://vim.rtorr.com/
-
-Tips
-====
-
-* :r! date Insert Current date and time
-
 my .vimrc
 =========
 
