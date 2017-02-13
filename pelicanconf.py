@@ -39,6 +39,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 # More setting see:
 # https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 THEME = 'pelican-themes/pelican-bootstrap3'
+
 CC_LICENSE = 'CC-BY-NC-ND'
 # GITHUB_USER = 'dormouse'
 DOCUTIL_CSS = True # for rst file
