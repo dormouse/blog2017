@@ -3,12 +3,21 @@ Vim Note
 
 
 :date: 2017-02-10
-:modified: 2017-02-10
+:modified: 2017-02-16
 :slug: vim-note
 :tags: vim, note
 :category: software
 :author: Dormouse Young
 :summary: Note for vim.
+
+Use MacVim in Command line
+==========================
+
+2017年 2月16日 星期四 22时46分40秒 CST
+
+Add following in ``./bash_profile``::
+
+    alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
 Edit more than one file
 =======================
