@@ -49,4 +49,9 @@ cmd d         split the current session into two panes horizontally
 cmd shift d   split the current session into two panes Vertically
 ============= =======================================================
 
+- Cmd+left arrow, Cmd+right arrow navigates among tabs. So does Cmd-{ and Cmd-}.
+- Cmd+number navigates directly to a tab.
+- Cmd+Option+Number navigates directly to a window.
+- Cmd+Option+Arrow keys navigate among split panes.
+- Cmd+] and Cmd+[ navigates among split panes in order of use.
 
