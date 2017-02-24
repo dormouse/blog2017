@@ -14,6 +14,7 @@ python 获得 Home 路径
 =====================
 
 ::
+
     homedir = os.path.expanduser('~')
 
     # ...works on at least windows and linux.
@@ -40,6 +41,7 @@ python oracle blob
 ==================
 
 ::
+
     file = open('aurora.jpg', "wb")
     file.write(result[0][2].read())
     file.close()
