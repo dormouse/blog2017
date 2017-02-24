@@ -9,6 +9,42 @@ Python Note 900 - Other
 :author: Dormouse Young
 :summary: Python note series 900 - other
 
+
+python 获得 Home 路径
+=====================
+
+::
+    homedir = os.path.expanduser('~')
+
+    # ...works on at least windows and linux.
+    # In windows it points to the user's folder
+    #  (the one directly under Documents and Settings, not My Documents)
+
+
+    # In windows, you can choose to care about local versus roaming profiles.
+    # You can fetch the current user's through PyWin32.
+    #
+    # For example, to ask for the roaming 'Application Data' directory:
+    #  (CSIDL_APPDATA asks for the roaming, CSIDL_LOCAL_APPDATA for the local one)
+    #  (See microsoft references for further CSIDL constants)
+    try:
+        from win32com.shell import shellcon, shell
+        homedir = shell.SHGetFolderPath(0, shellcon.CSIDL_APPDATA, 0, 0)
+
+    except ImportError:
+        # quick semi-nasty fallback for non-windows/win32com case
+        homedir = os.path.expanduser("~")
+
+
+python oracle blob
+==================
+
+::
+    file = open('aurora.jpg', "wb")
+    file.write(result[0][2].read())
+    file.close()
+
+
 ConfigParser Usage
 ==================
 
