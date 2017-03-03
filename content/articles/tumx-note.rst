@@ -137,6 +137,7 @@ Default key bindings
 ====================
 
 The default command key bindings are::
+
     C-b Send the prefix key (C-b) through to the application.
     C-o Rotate the panes in the current window forwards.
     C-z Suspend the tmux client.
