@@ -27,14 +27,18 @@ Reload it::
 
     reload .bashrc
 
-Creat virtualenv::
+Create virtualenv::
 
     cd project
-    mkvirtualenv legohole
+    mkvirtualenv env_name
+
+Create virtualenv with python3::
+
+    mkvirtualenv -p python3 env_name
 
 You should see something like::
 
-    (legohole)dormouse@dormouse ~ $
+    (env_name)dormouse@dormouse ~ $
 
 Usage::
 
