@@ -19,6 +19,107 @@ Example::
     conf_parser.read(conf_file)
     conf = {key: value for key, value in conf_parser.items(section_name)}
 
+Deal with INI file
+-------------------
+
+基本的文件示例如下::
+
+    [DEFAULT]
+    ServerAliveInterval = 45
+    Compression = yes
+    CompressionLevel = 9
+    ForwardX11 = yes
+
+    [bitbucket.org]
+    User = hg
+
+    [topsecret.server.com]
+    Port = 50022
+    ForwardX11 = no
+
+如何生成 INI 文件
+------------------
+::
+
+    >>> import configparser
+    >>> config = configparser.ConfigParser()
+    >>> config['DEFAULT'] = {'ServerAliveInterval': '45',
+    ...                      'Compression': 'yes',
+    ...                      'CompressionLevel': '9'}
+    >>> config['bitbucket.org'] = {}
+    >>> config['bitbucket.org']['User'] = 'hg'
+    >>> config['topsecret.server.com'] = {}
+    >>> topsecret = config['topsecret.server.com']
+    >>> topsecret['Port'] = '50022'     # mutates the parser
+    >>> topsecret['ForwardX11'] = 'no'  # same here
+    >>> config['DEFAULT']['ForwardX11'] = 'yes'
+    >>> with open('example.ini', 'w') as configfile:
+    ...   config.write(configfile)
+    ...
+
+使用方法和字典基本一致。
+
+如何读取 INI 文件
+------------------
+
+::
+
+    >>> import configparser
+    >>> config = configparser.ConfigParser()
+    >>> config.sections()
+    []
+    >>> config.read('example.ini')
+    ['example.ini']
+    >>> config.sections()
+    ['bitbucket.org', 'topsecret.server.com']
+    >>> 'bitbucket.org' in config
+    True
+    >>> 'bytebong.com' in config
+    False
+    >>> config['bitbucket.org']['User']
+    'hg'
+    >>> config['DEFAULT']['Compression']
+    'yes'
+    >>> topsecret = config['topsecret.server.com']
+    >>> topsecret['ForwardX11']
+    'no'
+    >>> topsecret['Port']
+    '50022'
+    >>> for key in config['bitbucket.org']: print(key)
+    ...
+    user
+    compressionlevel
+    serveraliveinterval
+    compression
+    forwardx11
+    >>> config['bitbucket.org']['ForwardX11']
+    'yes'
+
+DEFAULT 一节会自动代入到其他节
+
+支持的数据类型
+---------------
+
+
+Config parsers 不猜测数据类型，都是以文本形式保存的。你要自己转换数据类型::
+
+    >>> int(topsecret['Port'])
+    50022
+    >>> float(topsecret['CompressionLevel'])
+    9.0
+
+提供 getboolean() 、 getint() 和 getfloat() 来读取相应的数据类型。
+getboolean 比较方便，因为 bool('False') 的结果为 True ::
+
+    >>> topsecret.getboolean('ForwardX11')
+    False
+    >>> config['bitbucket.org'].getboolean('ForwardX11')
+    True
+    >>> config.getboolean('bitbucket.org', 'Compression')
+    True
+
+更多内容参见：https://docs.python.org/3/library/configparser.html#module-configparser
+
 
 读取 Excel 文件内容
 ===================
