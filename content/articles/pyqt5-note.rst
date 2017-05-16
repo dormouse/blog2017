@@ -67,3 +67,14 @@ pyuic::
 qt5assistant::
 
     Program: /usr/lib/x86_64-linux-gnu/qt5/bin/assistant
+
+关于 model index
+==========================
+
+获得 model index::
+
+    index = model.index(row, column, QModelIndex())
+
+设置 model 的值::
+
+    model.setData(index, value, Qt.EditRole)
