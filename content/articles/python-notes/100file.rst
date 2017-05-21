@@ -80,8 +80,9 @@ shutil 操作
 
 复制文件：
 
-* shutil.copyfile("oldfile","newfile") oldfile和newfile都只能是文件
-* shutil.copy("oldfile","newfile") oldfile只能是文件夹，newfile可以是文件，也可以是目标目录
+* shutil.copyfile("oldfile","newfile") oldfile 和 newfile 都只能是文件。
+* shutil.copy("oldfile","newfile") oldfile 只能是文件夹， newfile 可以是文件，
+  也可以是目标目录
 
 复制文件夹：
 

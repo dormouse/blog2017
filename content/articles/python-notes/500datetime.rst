@@ -24,6 +24,7 @@ Python 标准库中的 datetime 模块提供了各种对日期和时间的处理
     In [3]: now
     Out[3]: datetime.datetime(2015, 6, 1, 10, 26, 38, 836099)
 
+    时间转换为字符串
     In [4]: now.strftime("%Y-%m-%d %H:%M:%S")
     Out[4]: '2015-06-01 10:26:38'
 
@@ -32,6 +33,12 @@ Python 标准库中的 datetime 模块提供了各种对日期和时间的处理
 
     In [6]: now - datetime.timedelta(days=1)
     Out[6]: datetime.datetime(2015, 5, 31, 10, 26, 38, 836099)
+
+    字符串转换为时间
+    In [7]: str = 'Fri, 19 May 2017 10:50:42'
+    In [8]: datetime.datetime.strptime(str, '%a, %d %b %Y %H:%M:%S')
+    Out[8]: datetime.datetime(2017, 5, 19, 10, 50, 42)
+
 
 转义符说明：
 
@@ -62,6 +69,37 @@ Python 标准库中的 datetime 模块提供了各种对日期和时间的处理
 %%     %号本身
 ====== ==============================================
 
+Locale 的问题
+===========================
+在使用 strftime 和 strptime 时要注意 locale ，不同的 locale 打出来的是不一
+样的。同理，在使用 strptime 的时候也是如此，否则就会出错::
+
+    In [1]: import datetime, locale
+
+    In [2]: now = datetime.datetime.now()
+
+    In [3]: format_str = '%a, %d %b %Y %H:%M:%S'
+
+    In [4]: locale.setlocale(locale.LC_ALL, ('zh_CN', 'UTF-8'))
+    Out[4]: 'zh_CN.UTF-8'
+
+    In [5]: now.strftime(format_str)
+    Out[5]: '五, 19  5月 2017 14:25:18'
+
+    In [6]: locale.setlocale(locale.LC_ALL, ('en_US', 'UTF-8'))
+    Out[6]: 'en_US.UTF-8'
+
+    In [7]: now.strftime(format_str)
+    Out[7]: 'Fri, 19 May 2017 14:25:18'
+
+    In [19]:  datetime.datetime.strptime('Fri, 19 May 2017 14:25:18', format_str)
+    Out[19]: datetime.datetime(2017, 5, 19, 14, 25, 18)
+
+    In [20]: locale.setlocale(locale.LC_ALL, ('zh_CN', 'UTF-8'))
+    Out[20]: 'zh_CN.UTF-8'
+
+    In [21]:  datetime.datetime.strptime('Fri, 19 May 2017 14:25:18', format_str)
+    ValueError: time data 'Fri, 19 May 2017 14:25:18' does not match format '%a, %d %b %Y %H:%M:%S'
 
 时区转换
 ========
