@@ -39,6 +39,14 @@ Python 标准库中的 datetime 模块提供了各种对日期和时间的处理
     In [8]: datetime.datetime.strptime(str, '%a, %d %b %Y %H:%M:%S')
     Out[8]: datetime.datetime(2017, 5, 19, 10, 50, 42)
 
+    struct time to timestamp
+    time.mktime()
+
+    time zone
+    time.timezone
+
+    time to loacl datetime
+    datetime.fromtimestamp(time.mktime(struct_time)-time.timezone)
 
 转义符说明：
 

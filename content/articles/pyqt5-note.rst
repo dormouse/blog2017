@@ -78,3 +78,15 @@ qt5assistant::
 设置 model 的值::
 
     model.setData(index, value, Qt.EditRole)
+
+Some tips
+==========
+
+widget connect signal with parameter::
+
+    self.button1.clicked.connect(lambda : do_stuff('btn one'))
+    self.button2.clicked.connect(lambda : do_stuff('btn two'))
+
+move window to center of screen::
+
+    self.move(QtGui.QApplication.desktop().screen().rect().center()- self.rect().center())
