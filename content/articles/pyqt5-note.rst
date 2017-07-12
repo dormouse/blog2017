@@ -103,3 +103,13 @@ widget connect signal with parameter::
 move window to center of screen::
 
     self.move(QtGui.QApplication.desktop().screen().rect().center()- self.rect().center())
+
+TreeView
+========
+
+set columnt width::
+    view->header()->setStretchLastSection(false);
+    view->header()->setResizeMode(INDEX_COLUMN_SKU, QHeaderView::Interactive);
+    view->header()->setResizeMode(INDEX_COLUMN_NAME, QHeaderView::Stretch);
+    view->header()->setResizeMode(INDEX_COLUMN_QUANTITY, QHeaderView::Interactive);
+    view->header()->setResizeMode(INDEX_COLUMN_PRICE, QHeaderView::Interactive);
