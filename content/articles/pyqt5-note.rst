@@ -40,11 +40,24 @@ OSX
 ::
 
     brew install python3
+
+    Pip, setuptools, and wheel have been installed. To update them
+      pip3 install --upgrade pip setuptools wheel
+
+    You can install Python packages with
+      pip3 install <package>
+
+    They will install into the site-package directory
+      /usr/local/lib/python3.6/site-packages
+
+    See: http://docs.brew.sh/Homebrew-and-Python.html
+
     brew install pyqt5
 
 文档和示例都在源代码中，下载：https://sourceforge.net/projects/pyqt/files/PyQt5/
 
-assistant : /usr/local/Cellar/qt5/5.6.1-1/libexec/Assistant-qt5.app/Contents/MacOS/Assistant
+assistant : /usr/local/Cellar/qt/5.9.0/libexec/Assistant.app
+/usr/local/Cellar/qt5/5.6.1-1/libexec/Assistant-qt5.app/Contents/MacOS/Assistant
 
 PyCharm 配置相关工具
 =============================
