@@ -72,4 +72,19 @@ conda 官方文档：https://docs.continuum.io/docs_oss/conda/using/
 搜索包：
     conda search beautifulsoup4
 
+Install Downlaod tools
+=======================
+2017-07-12
+
+Install uGet::
+
+    sudo add-apt-repository ppa:plushuang-tw/uget-stable
+    sudo apt update
+    sudo apt install uget
+
+Install aria2::
+
+    sudo apt-get install aria2
+
+Install firefox plugin FlashGot
 
