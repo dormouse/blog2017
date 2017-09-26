@@ -6,7 +6,7 @@ PyQt5 Note
 :modified: 2017-05-15
 :slug: pyqt5-note
 :tags: pyqt, note
-:category: develop
+:category: development
 :author: Dormouse Young
 :summary: Note of PyQt5
 
@@ -108,6 +108,7 @@ TreeView
 ========
 
 set columnt width::
+
     view->header()->setStretchLastSection(false);
     view->header()->setResizeMode(INDEX_COLUMN_SKU, QHeaderView::Interactive);
     view->header()->setResizeMode(INDEX_COLUMN_NAME, QHeaderView::Stretch);

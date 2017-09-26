@@ -3,11 +3,49 @@
 ====================
 
 :date: 2012-04-25
-:modified: 2014-10-30
+:modified: 2017-09-25
 :slug: python-virtual-env
 :tags: python, virtual
 :category: development
 :author: Dormouse Young
+
+Install Anaconda
+================
+
+官方网站：https://www.continuum.io/
+清华大学开源软件镜像站：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+
+conda 官方文档：https://docs.continuum.io/docs_oss/conda/using/
+
+查看版本::
+
+    conda -V
+    conda --version
+
+查看信息::
+
+    conda info
+
+查看当前所在的虚拟环境::
+
+    conda info --e
+
+创建虚拟环境::
+
+    conda /home/somebody/anaconda3/bin/conda create -p /home/somebody/anaconda3/envs/env_name -y python=3.6
+
+切换虚拟环境::
+
+    source activate env_name
+
+查看当前环境的包列表::
+
+    conda list
+
+搜索包::
+
+    conda search beautifulsoup4
+
 
 使用 virtualenvwrapper
 =======================

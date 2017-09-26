@@ -9,9 +9,9 @@ About
 Me
 ==
 
-A AFOL, Pythoner, vimer.
+An AFOL, Pythoner, vimer.
 
 This site
 =========
 
-A blog of me.
+My personal blog.
