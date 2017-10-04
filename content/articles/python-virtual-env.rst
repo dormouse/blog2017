@@ -15,7 +15,7 @@ Install Anaconda
 官方网站：https://www.continuum.io/
 清华大学开源软件镜像站：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 
-conda 官方文档：https://docs.continuum.io/docs_oss/conda/using/
+conda 官方文档：https://docs.anaconda.com/
 
 查看版本::
 
@@ -25,6 +25,13 @@ conda 官方文档：https://docs.continuum.io/docs_oss/conda/using/
 查看信息::
 
     conda info
+
+虚拟环境
+--------
+
+查看有哪些虚拟环境::
+
+    conda env list
 
 查看当前所在的虚拟环境::
 
