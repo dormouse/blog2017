@@ -1,4 +1,3 @@
-==============================
 Build Static Blog With Pelican
 ==============================
 
@@ -189,14 +188,14 @@ preview local html::
 
 
 Add Favicon
-===========
+-----------
 
 http://iconifier.net is helpful. Upload your pic and get a zip file which
 include all size files within.
 
 
 Auto Github Push
-================
+------------------
 
 Modify Makefile. Add::
 
@@ -211,14 +210,14 @@ Chang "github" part as following::
 
 
 Add License
-===========
+------------
 
 I choose Attribution-NonCommercial-ShareAlike 4.0 International
 (CC BY-NC-SA 4.0) and copy code from http://creativecommons.org/choose/ .
 
 
 Reference
-=========
+--------------
 
 * `Configuring Pelican Static Blog <http://pbpython.com/pelican-config.html>`_
 * `使用 Pelican + Markdown + GitHub Pages 来撰写 Blog
@@ -226,7 +225,7 @@ Reference
 
 
 TODO
-====
+-----
 
 - add TOC(use pelican-toc plugin)
 - update conf

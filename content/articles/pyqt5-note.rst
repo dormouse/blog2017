@@ -1,5 +1,5 @@
 PyQt5 Note
-***********
+==========
 
 
 :date: 2017-05-15
@@ -10,17 +10,10 @@ PyQt5 Note
 :author: Dormouse Young
 :summary: Note of PyQt5
 
-============================
-PyQt5 学习笔记
-============================
-
 安装 PyQt5 及其文档
-============================
+--------------------
 
-unbuntu
------------
-
-::
+unbuntu::
 
     sudo apt-get install python3-pyqt5 pyqt5-doc pyqt5-examples
     sudo apt-get install qtbase5-doc
@@ -34,10 +27,7 @@ Qt5 文档所在目录： /usr/share/qt5/doc
     sudo apt-get install python3-pyqt5* qtbase5-doc
     sudo apt-get install qt5-doc qttools5-dev-tools
 
-OSX
----
-
-::
+OSX::
 
     brew install python3
 
@@ -60,10 +50,9 @@ assistant : /usr/local/Cellar/qt/5.9.0/libexec/Assistant.app
 /usr/local/Cellar/qt5/5.6.1-1/libexec/Assistant-qt5.app/Contents/MacOS/Assistant
 
 PyCharm 配置相关工具
-=============================
+--------------------
 
 Linux Mint
-----------------------
 
 qt5desinger::
 
@@ -82,7 +71,7 @@ qt5assistant::
     Program: /usr/lib/x86_64-linux-gnu/qt5/bin/assistant
 
 关于 model index
-==========================
+-----------------
 
 获得 model index::
 
@@ -93,7 +82,7 @@ qt5assistant::
     model.setData(index, value, Qt.EditRole)
 
 Some tips
-==========
+---------
 
 widget connect signal with parameter::
 
@@ -105,7 +94,7 @@ move window to center of screen::
     self.move(QtGui.QApplication.desktop().screen().rect().center()- self.rect().center())
 
 TreeView
-========
+--------
 
 set columnt width::
 

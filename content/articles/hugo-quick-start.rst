@@ -24,7 +24,22 @@ DOC: https://gohugo.io/overview/introduction/
 Quick start
 ===========
 
-Install Hugo
+Install
+-------
+
+Linux
+-----
+sudo apt-get install hugo
+
+OR
+
+Download the appropriate version for your platform from [Hugo Releases](
+https://github.com/gohugoio/hugo/releases)
+
+Put it in `/usr/local/bin`
+
+MacOS
+-----
 
 ::
 
@@ -36,6 +51,11 @@ Check Hugo
 
     $ hugo help
     $ hugo version
+
+Install Pygments
+----------------
+sudo apt-get install python-pygments
+
 
 Start new site
 

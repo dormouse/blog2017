@@ -1,5 +1,5 @@
 Ifttt Note
-**********
+==========
 
 :date: 2017-05-21
 :modified: 2017-05-21
@@ -10,7 +10,7 @@ Ifttt Note
 :summary: some note about ifttt
 
 IFTTT Maker
-===========
+-----------
 
 A simple test::
 

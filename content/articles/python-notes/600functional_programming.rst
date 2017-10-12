@@ -1,5 +1,6 @@
 Python Note 600 - Functional Programming
-****************************************
+========================================
+
 
 :date: 2017-02-13
 :modified: 2017-02-13
@@ -9,8 +10,9 @@ Python Note 600 - Functional Programming
 :author: Dormouse Young
 :summary: Python note series 600 - functional-programming
 
+
 lambda
-======
+-------
 
 lambda 语句中，冒号前是参数，可以有多个，用逗号隔开，冒号右边的返回值。
 lambda 语句构建是一个函数对象::
@@ -24,7 +26,7 @@ lambda 语句构建是一个函数对象::
     Out[3]: <function __main__.<lambda>>
 
 filter
-======
+-------
 
 filter(function or None, sequence) -> list, tuple, or string
 
@@ -38,7 +40,7 @@ filter(function or None, sequence) -> list, tuple, or string
     Out[5]: [18, 9, 24, 12, 27]
 
 map
-===
+----
 
 map(function, sequence[, sequence, ...]) -> list
 
@@ -66,7 +68,7 @@ None 来补充::
     Out[11]: [('Packers', 'Ravens'), ('49ers', 'Patriots')]
 
 reduce
-======
+-------
 
 reduce(function, sequence[, initial]) -> value
 

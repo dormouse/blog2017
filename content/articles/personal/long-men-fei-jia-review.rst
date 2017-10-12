@@ -1,4 +1,3 @@
-============
 龙门飞甲3D版
 ============
 
@@ -7,6 +6,7 @@
 :tags: movie
 :category: personal
 :author: Dormouse Young
+
 
 今天看了龙门飞甲3D版，不出意外地失望。版本写得烂，这年头编个好故事这么难么？
 
